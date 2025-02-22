@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { LandingPage } = require('../tests/pages/LandingPage.ts');
+const { LandingPage } = require('../../tests/pages/LandingPage.ts');
 
 let landingPage;
 test.beforeEach(async ({ page }) => {
