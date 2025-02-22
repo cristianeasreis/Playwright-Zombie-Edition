@@ -1,10 +1,14 @@
 // @ts-check
-const {test, expect} = require('@playwright/test');
+const { test, expect } = require('@playwright/test');
 const { LandingPage } = require('../tests/pages/LandingPage.ts');
 
-test('deve cadastrar um lead na fila de espera', async ({ page }) => {
-  const landingPage = new LandingPage(page);
+let landingPage;
+test.beforeEach(async ({ page }) => {
+  landingPage = new LandingPage(page);
+});
 
+
+test('deve cadastrar um lead na fila de espera', async ({ page }) => {
   await landingPage.visit();
   await landingPage.openLeadModal();
   await landingPage.submitLeadForm('Cristiane Araujo Souza Dos Reis', 'cristiane.araujo@gmail.com');
@@ -13,41 +17,30 @@ test('deve cadastrar um lead na fila de espera', async ({ page }) => {
 
 });
 test('não deve cadastrar com email incorreto', async ({ page }) => {
-  const landingPage = new LandingPage(page);
-
   await landingPage.visit();
   await landingPage.openLeadModal();
   await landingPage.submitLeadForm('Cristiane Araujo Souza Dos Reis', 'cristiane.araujo.com.br');
-
   await landingPage.alertHaveText('Email incorreto');
 
 });
 
 test('não deve cadastrar quando o nome não é preenchido', async ({ page }) => {
-  const landingPage = new LandingPage(page);
-
   await landingPage.visit();
   await landingPage.openLeadModal();
   await landingPage.submitLeadForm('', 'cristiane.araujo@gmail.com');
-
   await landingPage.alertHaveText('Campo obrigatório');
 
 });
 
 test('não deve cadastrar quando o email não é preenchido', async ({ page }) => {
-  const landingPage = new LandingPage(page);
-
   await landingPage.visit();
   await landingPage.openLeadModal();
   await landingPage.submitLeadForm('Cristiane Araujo Souza Dos Reis', '');
-
   await landingPage.alertHaveText('Campo obrigatório');
 
 });
 
 test('não deve cadastrar quando nenhum campo é preenchido', async ({ page }) => {
-  const landingPage = new LandingPage(page);
-
   await landingPage.visit();
   await landingPage.openLeadModal();
   await landingPage.submitLeadForm('', '');
