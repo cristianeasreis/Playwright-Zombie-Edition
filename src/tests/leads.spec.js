@@ -12,8 +12,8 @@ test('deve cadastrar um lead na fila de espera', async ({ page }) => {
     page.getByTestId('modal').getByRole('heading')
   ).toHaveText('Fila de espera');
 
-  await page.getByPlaceholder('Seu nome completo').fill('Cristiane Araujo Souza Dos Reis');
-  await page.getByPlaceholder('Seu email principal').fill('cristianeara628@gmail.com');
+  await page.getByPlaceholder('Informe seu nome').fill('Cristiane Araujo Souza Dos Reis');
+  await page.getByPlaceholder('Informe seu email').fill('cristianeara628@gmail.com');
 
   await page.getByTestId('modal')
     .getByText('Quero entrar na fila!').click();
@@ -34,8 +34,8 @@ test('não deve cadastrar com email incorreto', async ({ page }) => {
     page.getByTestId('modal').getByRole('heading')
   ).toHaveText('Fila de espera');
 
-  await page.getByPlaceholder('Seu nome completo').fill('Cristiane Araujo Souza Dos Reis');
-  await page.getByPlaceholder('Seu email principal').fill('cristianeara.com.br');
+  await page.getByPlaceholder('Informe seu nome').fill('Cristiane Araujo Souza Dos Reis');
+  await page.getByPlaceholder('Informe seu email').fill('cristianeara.com.br');
 
   await page.getByTestId('modal')
     .getByText('Quero entrar na fila!').click();
@@ -54,7 +54,7 @@ test('não deve cadastrar quando o nome não é preenchido', async ({ page }) =>
     page.getByTestId('modal').getByRole('heading')
   ).toHaveText('Fila de espera');
 
-  await page.getByPlaceholder('Seu email principal').fill('cristianeara628@gmail.com.br');
+  await page.getByPlaceholder('Informe seu email').fill('cristianeara628@gmail.com.br');
 
   await page.getByTestId('modal')
     .getByText('Quero entrar na fila!').click();
@@ -73,7 +73,7 @@ test('não deve cadastrar quando o email não é preenchido', async ({ page }) =
     page.getByTestId('modal').getByRole('heading')
   ).toHaveText('Fila de espera');
 
-  await page.getByPlaceholder('Seu nome completo').fill('Cristiane Araujo Souza Dos Reis');
+  await page.getByPlaceholder('Informe seu nome').fill('Cristiane Araujo Souza Dos Reis');
 
 
   await page.getByTestId('modal')
