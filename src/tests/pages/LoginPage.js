@@ -21,4 +21,6 @@ export class LoginPage {
         await this.page.waitForLoadState('networkidle');
         await expect(this.page).toHaveURL(/.*admin/);   
     }
+
+
 }
