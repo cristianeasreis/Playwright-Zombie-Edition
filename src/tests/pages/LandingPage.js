@@ -1,9 +1,9 @@
-import { expect, Page } from '@playwright/test';
+const { expect} = require('@playwright/test');
 
 export class LandingPage {
-    private page: Page;
+   
 
-    constructor(page: Page) {
+    constructor(page) {
         this.page = page;
     }
 
