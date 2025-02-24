@@ -22,3 +22,27 @@ test('não deve logar com senha incorreta', async ({ page }) => {
     const message = 'Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.';
     await toast.haveText(message);
 });
+
+test('não deve logar quando o email  é Invalido', async ({ page }) => {
+    await loginPage.Visit();
+    await loginPage.submit('adminzombieplus.com', 'abc123');
+    await loginPage.alertHaveText('Email incorreto');
+});
+
+test('não deve logar quando o email não é preenchido', async ({ page }) => {
+    await loginPage.Visit();
+    await loginPage.submit('', 'abc123');
+    await loginPage.alertHaveText('Campo obrigatório');
+});
+
+test('não deve logar quando a senha não é preenchida', async ({ page }) => {
+    await loginPage.Visit();
+    await loginPage.submit('admin@zombieplus.com', '');
+    await loginPage.alertHaveText('Campo obrigatório');
+});
+
+test('não deve logar quando nenhum campo é preenchido', async ({ page }) => {
+    await loginPage.Visit();
+    await loginPage.submit('', '');
+    await loginPage.alertHaveText(['Campo obrigatório', 'Campo obrigatório']);
+})
