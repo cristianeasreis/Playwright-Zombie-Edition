@@ -1,19 +1,22 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../tests/pages/LoginPage.js');
+const { MoviesPage } = require('../../tests/pages/MoviesPage.js');
 const { Toast } = require('../../tests/pages/Components.js');
 
 let loginPage;
+let moviesPage;
 let toast;
 
 test.beforeEach(({ page }) => {
     loginPage = new LoginPage(page);
+    moviesPage = new MoviesPage(page);
     toast = new Toast(page);
 });
 
 test('deve logar como administrador', async ({ page }) => {
     await loginPage.Visit();
     await loginPage.submit('admin@zombieplus.com', 'pwd123');
-    await loginPage.isLoggedIn();
+    await moviesPage.isLoggedIn();
 });
 
 test('não deve logar com senha incorreta', async ({ page }) => {
