@@ -23,7 +23,7 @@ test('não deve logar com senha incorreta', async ({ page }) => {
     await loginPage.Visit();
     await loginPage.submit('admin@zombieplus.com', 'abc123');
     const message = 'Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.';
-    await toast.haveText(message);
+    await toast.containText(message);
 });
 
 test('não deve logar quando o email  é Invalido', async ({ page }) => {
