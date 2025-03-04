@@ -19,6 +19,6 @@ test('deve poder cadastrar um novo filme ', async ({ page }) => {
     await loginPage.Visit();
     await loginPage.submit('admin@zombieplus.com', 'pwd123');
     await moviesPage.isLoggedIn();
-    await moviesPage.create('Resident Evil', 'A missão', 'Sony Pictures', '2002');
+    await moviesPage.create('Resident Evil', 'A missão', 'Netflix', '1980');
 
 });
