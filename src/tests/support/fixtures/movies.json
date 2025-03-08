@@ -1,83 +1,60 @@
 {
-    "create": {
-      "title": "Guerra Mundial Z",
-      "overview": "Um ex-investigador da ONU, Gerry Lane, percorre o mundo em uma corrida contra o tempo para deter uma pandemia que está derrubando exércitos e governos e ameaçando dizimar a humanidade.",
-      "company": "Paramount Pictures",
-      "release_year": 2013,
-      "featured": false,
-      "cover": "images/guerra_mundial_z.png"
-    },
-    "filme_2": {
-      "title": "madrugada_dos_mortos",
-      "overview": "Após uma pandemia transformar a população mundial em zumbis, um grupo de sobreviventes se refugia em um shopping center, mas logo percebe que a ameaça vem tanto de dentro quanto de fora.",
-      "company": "Universal Pictures",
-      "release_year": 2004,
-      "featured": false,
-      "cover": "images/madrugada_dos_mortos.png"
-    },
-    "filme_3": {
-      "title": "exterminio",
-      "overview": "Um vírus altamente contagioso e letal se espalha pelo Reino Unido, transformando os infectados em criaturas violentas. Um grupo de sobreviventes luta para encontrar um refúgio seguro.",
-      "company": "Fox Searchlight Pictures",
-      "release_year": 2002,
-      "featured": false,
-      "cover": "images/exterminio.png"
-    },
-    "filme_4": {
-      "title": "a_noite_dos_mortos_vivos",
-      "overview": "Um grupo de pessoas se esconde em uma casa de fazenda enquanto mortos-vivos canibais começam a tomar conta do mundo ao seu redor.",
-      "company": "Continental Distributing",
-      "release_year": 1968,
-      "featured": false,
-      "cover": "images/a_noite_dos_mortos_vivos.png"
-    },
-    "filme_5": {
-      "title": "zumbilandia",
-      "overview": "Em um mundo dominado por zumbis, um grupo de sobreviventes excêntricos viaja pelos Estados Unidos, aprendendo a lidar com os mortos-vivos e entre si.",
-      "company": "Columbia Pictures",
-      "release_year": 2009,
-      "featured": false,
-      "cover": "images/zumbilandia.png"
-    },
-    "filme_6": {
-      "title": "o_exercito_dos_mortos",
-      "overview": "Após um surto zumbi em Las Vegas, um grupo de mercenários planeja um grande assalto a um cofre dentro da cidade infestada de mortos-vivos.",
-      "company": "Netflix",
-      "release_year": 2021,
-      "featured": false,
-      "cover": "images/o_exercito_dos_mortos.png"
-    },
-    "filme_7": {
-      "title": "rec",
-      "overview": "Uma repórter e seu cinegrafista acompanham bombeiros em um chamado de emergência em um prédio, mas logo descobrem que os moradores foram infectados por um vírus mortal e ficam presos no local.",
-      "company": "Filmax",
-      "release_year": 2007,
-      "featured": false,
-      "cover": "images/rec.png"
-    },
-    "filme_8": {
-      "title": "planeta_terror",
-      "overview": "Após um gás letal transformar pessoas em zumbis sanguinários, um grupo de sobreviventes tenta escapar da cidade antes que seja tarde demais.",
-      "company": "Dimension Films",
-      "release_year": 2007,
-      "featured": false,
-      "cover": "images/planeta_terror.png"
-    },
-    "filme_9": {
-      "title": "o_despertar_dos_mortos",
-      "overview": "A continuação de 'A Noite dos Mortos-Vivos' mostra um grupo de sobreviventes se refugiando em um shopping center enquanto hordas de zumbis tomam conta do mundo.",
-      "company": "United Film Distribution Company",
-      "release_year": 1978,
-      "featured": false,
-      "cover": "images/o_despertar_dos_mortos.png"
-    },
-    "filme_10": {
-      "title": "resident_evil_o_hospede_maldito",
-      "overview": "Alice e um grupo de soldados de elite invadem um laboratório secreto da Umbrella Corporation para conter um surto viral que transforma as pessoas em zumbis assassinos.",
-      "company": "Screen Gems",
-      "release_year": 2002,
-      "featured": false,
-      "cover": "images/resident_evil_o_hospede_maldito.png"
-    }
+  "create": {
+    "title": "Guerra Mundial Z",
+    "overview": "Um ex-investigador da ONU, Gerry Lane, viaja o mundo em uma corrida contra o tempo para parar uma pandemia zumbi que está derrubando exércitos e governos, e ameaçando dizimar a própria humanidade.",
+    "company": "Paramount Pictures",
+    "release_year": 2013,
+    "featured": true,
+    "cover": "/covers/movies/wwz.png"
+  },
+  "duplicate": {
+    "title": "Madrugada dos Mortos",
+    "overview": "Um grupo de sobreviventes se refugia em um shopping center enquanto o mundo é tomado por zumbis famintos.",
+    "company": "Universal Pictures",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "/covers/movies/madrugada.jpg"
+  },
+  "to_remove": {
+    "title": "Resident Evil: O Hóspede Maldito",
+    "overview": "Uma equipe militar deve combater uma inteligência artificial e zumbis famintos após um acidente em um laboratório subterrâneo.",
+    "company": "Columbia Pictures",
+    "release_year": 2002,
+    "featured": false,
+    "cover": "/covers/movies/resident-evil.png"
+  },
+  "search": {
+    "input": "zumbi",
+    "outputs": [
+      "Zumbilândia",
+      "Orgulho e Preconceito e Zumbis",
+      "Meu Namorado é um Zumbi"
+    ],
+    "data": [
+      {
+        "title": "Zumbilândia",
+        "overview": "Em um mundo pós-apocalíptico, quatro sobreviventes se unem para viajar pelo sudoeste dos Estados Unidos em busca de um lugar seguro.",
+        "company": "Columbia Pictures",
+        "release_year": 2009,
+        "featured": false,
+        "cover": "/covers/movies/zumbilandia.png"
+      },
+      {
+        "title": "Orgulho e Preconceito e Zumbis",
+        "overview": "Elizabeth Bennet e suas irmãs lutam contra zumbis enquanto navegam pelas complexidades da sociedade e relacionamentos na Inglaterra do século XIX.",
+        "company": "Fox Entertainment",
+        "release_year": 2016,
+        "featured": false,
+        "cover": "/covers/movies/opz.png"
+      },
+      {
+        "title": "Meu Namorado é um Zumbi",
+        "overview": "Em um mundo pós-apocalíptico, um zumbi diferente dos outros forma um vínculo com uma jovem, desencadeando uma série de eventos que podem transformar o mundo dos mortos-vivos.",
+        "company": "Sony Pictures",
+        "release_year": 2013,
+        "featured": false,
+        "cover": "/covers/movies/warm-bodies.png"
+      }
+    ]
   }
-  
+}
