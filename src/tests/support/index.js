@@ -1,9 +1,9 @@
 const { test: base, expect } = require('@playwright/test');
 
-const { Leads } = require('../../tests/actions/Leads.js');
-const { Login } = require('../../tests/actions/Login.js');
-const { Movies } = require('../../tests/actions/Movies.js');
-const { Toast } = require('../../tests/actions/Components.js');
+const { Leads } = require('./actions/Leads.js');
+const { Login } = require('./actions/Login.js');
+const { Movies } = require('./actions/Movies.js');
+const { Toast } = require('./actions/Components.js');
 
 
 const test = base.extend({
