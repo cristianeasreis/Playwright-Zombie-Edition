@@ -8,7 +8,7 @@ test('deve poder cadastrar um novo filme ', async ({ page }) => {
     await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}'`);
     await page.login.Visit();
     await page.login.submit('admin@zombieplus.com', 'pwd123');
-    await page.movies.isLoggedIn();
+    await page.login.isLoggedIn();
     await page.movies.create(movie.title, movie.overview, movie.company, movie.release_year);
     await page.toast.containText('Cadastro realizado com sucesso!');
 
@@ -17,7 +17,7 @@ test('deve poder cadastrar um novo filme ', async ({ page }) => {
 test('não deve cadastrar quando os campos obrigatórios não são preenchidos', async ({ page }) => {
     await page.login.Visit();
     await page.login.submit('admin@zombieplus.com', 'pwd123');
-    await page.movies.isLoggedIn();
+    await page.login.isLoggedIn();
     await page.movies.goForm();
     await page.movies.submit();
     await page.movies.alertHaveText([
