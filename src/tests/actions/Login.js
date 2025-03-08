@@ -23,15 +23,15 @@ export class Login {
         await this.page.getByText('Entrar').click();
     }
 
-    async alertHaveText(text){
+    async alertHaveText(text) {
         const alert = this.page.locator('span[class$=alert]');
         await expect(alert).toHaveText(text);
     }
-    
+
     async isLoggedIn() {
-       // await this.page.waitForLoadState('networkidle');
-        await expect(this.page).toHaveURL(/.*admin/);
+        const loggedUser = this.page.locator('.logged-user');
+        await expect(loggedUser).toHaveText('Olá, Admin');
     }
-  
+
 
 }
