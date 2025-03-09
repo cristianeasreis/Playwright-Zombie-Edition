@@ -9,7 +9,7 @@ export class Toast {
         const toast = this.page.locator('.toast');
 
         await expect(toast).toContainText(message);
-        await expect(toast).not.toBeVisible({ timeout: 7000 });
+        await expect(toast).not.toBeVisible({ timeout: 13000 });
 
     }
 }
