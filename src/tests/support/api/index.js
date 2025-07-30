@@ -22,11 +22,9 @@ export class Api {
     }
 
     async getCompanyIdByName(companyName) {
-        await this.setToken();
-
         const response = await this.request.get('http://localhost:3333/companies', {
             headers: {
-                Authorization: this.token,                
+                Authorization: this.token,
             },
             params: {
                 name: companyName
@@ -42,7 +40,6 @@ export class Api {
 
     async postMovie(movie) {
         const companyId = await this.getCompanyIdByName(movie.company)
-        await this.setToken();
 
         const response = await this.request.post('http://localhost:3333/movies', {
             headers: {
